@@ -5,10 +5,13 @@
 		<title>Jokes MVC CRUD App</title>
 	</head>
 	<body>
+		<table>
+			<tr><th>Joke</th><th>Punchline</th><th>Rating</th></tr>
+			{{#jokes}}
+			<tr><td>{{joke}}</td><td>{{punchline}}</td><td>{{rating}}</td></tr> <br/>
+			{{/jokes}}
+		</table>
 		
-		{{#jokes}}
-			{{joke}} - {{punchline}} - {{rating}} <br/>
-		{{/jokes}}
-		
+	<a href="/joke">Add new joke.</a>
 	</body>
 </html>
